@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    // Servir uploads directamente
+    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
+    // Todas las demás rutas pasan por tu servidor Express
+    { "src": "/(.*)", "dest": "app.js" }
+  ]
+}
