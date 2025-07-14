@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Función para cargar y procesar Excel
   function loadExcel () {
-    const selectedFile = `./uploads/${fileSelect.value}`
+    const selectedFile = `/uploads/${fileSelect.value.toLowerCase()}`
     tableBody.innerHTML = ''
 
     fetch(selectedFile)
