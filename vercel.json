@@ -1,10 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "app.js", "use": "@vercel/node" }
+    { "src": "api/**/*.js", "use": "@vercel/node" },
+    { "src": "public/**/*",    "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
-    { "src": "/(.*)", "dest": "app.js" }
+    { "src": "/uploads/(.*)", "dest": "/api/file/$1" },
+    { "src": "/subir",      "dest": "/api/upload" },
+    { "src": "/last-update", "dest": "/api/last-update" },
+    { "src": "/(.*)",        "dest": "/public/$1" }
   ]
 }

@@ -10,11 +10,11 @@ const PORT = process.env.PORT || 3000
 app.use(express.urlencoded({ extended: true }))
 
 // Directorio para archivos subidos
-const uploadsDir = path.join(__dirname, 'public/uploads')
+const uploadsDir = path.join(__dirname, 'uploads')
 if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir)
 
 // Archivo para registrar fecha de última actualización
-const updateLog = path.join(__dirname, 'public/last_update.txt')
+const updateLog = path.join(__dirname, 'last_update.txt')
 
 // Configuración de Multer para dos archivos: stock_cba y stock_olavarria
 const storage = multer.diskStorage({
