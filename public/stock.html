@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Cubiertas</title>
+    <link rel="shortcut icon" href="./media/logo.svg" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
+    <link rel="stylesheet" href="css/stock.css" />
+    <script defer src="stock.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="./index.html">Incio</a>
+            <a href="./calculadora.html">Calculadora</a>
+            <a href="./comercial.html">Plazos de pago</a>
+            <a href="./stock.html"><span style="text-decoration:underline;">Stock</span></a>
+        </header>
+    </div>
+
+    <div class="container" style="padding:16px 0 0 0;">
+        <div style="text-align: center;">
+            <h1>Stock de Cubiertas</h1>
+            <p>Última actualización: <span id="lastUpdate">Cargando...</span></p>
+
+        </div>
+
+
+        <div class="controls"
+            style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+            <div class="controls_buscador">
+                <input class="buscador" type="text" id="searchInput" placeholder="Buscar una cubierta..." />
+                <img class="lupita" src="./media/lupita.svg" alt="">
+            </div>
+            <div style="margin-bottom:1rem; text-align:center;">
+                <label for="fileSelect">Stock de: </label>
+                <select id="fileSelect">
+                    <option value="stock_olavarria.XLS">Olavarría</option>
+                    <option value="stock_cba.XLS">Córdoba</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="filterSelect">Filtrar:</label>
+                <select id="filterSelect">
+                    <option value="todos">Todas las cubiertas</option>
+                    <option value="cubierta_china">Auto/camioneta chino</option>
+                    <option value="camion_chino">Camión chino</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad Disponible</th>
+                </tr>
+            </thead>
+            <tbody id="stockBody">
+                <!-- Filas generadas dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

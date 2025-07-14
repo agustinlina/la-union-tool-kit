@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./media/logo.svg" type="image/x-icon">
+  <title>Calculadora de Cheques</title>
+  <link rel="stylesheet" href="css/styles_index.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <a href="./index.html">Inicio</a>
+      <a href="./calculadora.html"><span style="text-decoration:underline;">Calculadora</span></a>
+      <a href="./comercial.html">Plazos de pago</a>
+      <a href="./stock.html">Stock</a>
+    </header>
+    <h1 style="display:flex;gap:6px;align-items:center;">Calculadora de
+      fechas</h1>
+    <label for="invoiceDate">Fecha de Factura:</label>
+    <input type="date" id="invoiceDate" />
+
+    <div id="chequeList">
+      <!-- Casilleros de cheque -->
+      <div class="cheque-item" data-index="1">
+        <label>Cheque 1:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="2">
+        <label>Cheque 2:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="3">
+        <label>Cheque 3:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="4">
+        <label>Cheque 4:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="5">
+        <label>Cheque 5:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="6">
+        <label>Cheque 6:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+      <div class="cheque-item" data-index="7">
+        <label>Cheque 7:</label>
+        <input type="date" class="cheque-date" />
+        <span class="days-remaining"></span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

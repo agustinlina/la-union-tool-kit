@@ -1,0 +1,117 @@
+/* Dark & Minimalist CSS para stock.html */
+:root {
+  --bg-color: #121212;
+  --fg-color: #e0e0e0;
+  --accent-color: #e0e0e0;
+  --border-color: #272727;
+  --hover-color: #1f1f1f;
+}
+
+.buscador {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: var(--bg-color);
+  border: none;
+  color: var(--fg-color);
+}
+
+.controls_buscador {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--bg-color);
+  align-items: center;
+  gap: 4px;
+}
+
+.lupita {
+  height: fit-content;
+  margin-left: 4px;
+  padding: 0 8px;
+  pointer-events: none;
+}
+header {
+  display: flex;
+  gap: 12px;
+  margin: 2rem auto;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #1e1e1e;
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+p {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+th,
+td {
+  padding: 12px 16px;
+  border: 1px solid var(--border-color);
+}
+
+th {
+  background-color: #1f1f1f;
+  text-align: left;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1b1b1b;
+}
+
+tbody tr:hover {
+  background-color: var(--hover-color);
+}
+
+#lastUpdate {
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+/* Estilos de enlaces y botones si es necesario */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
