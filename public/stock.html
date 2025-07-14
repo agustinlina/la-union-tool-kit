@@ -14,45 +14,41 @@
 <body>
     <div class="container">
         <header>
-            <a href="./index.html">Incio</a>
-            <a href="./calculadora.html">Calculadora</a>
+            <a href="./index.html">Calculadora</a>
             <a href="./comercial.html">Plazos de pago</a>
             <a href="./stock.html"><span style="text-decoration:underline;">Stock</span></a>
+            <a href="./subir.html">Subir Stock</a>
         </header>
     </div>
 
-    <div class="container" style="padding:16px 0 0 0;">
-        <div style="text-align: center;">
-            <h1>Stock de Cubiertas</h1>
-            <p>Última actualización: <span id="lastUpdate">Cargando...</span></p>
+    <div class="container">
+        <h1>Stock de Cubiertas</h1>
+        <p>Última actualización: <span id="lastUpdate">Cargando...</span></p>
 
+        <!-- NUEVO: Selector de archivo -->
+        <div style="margin-bottom:1rem; text-align:center;">
+            <label for="fileSelect">Archivo: </label>
+            <select id="fileSelect">
+                <option value="stock_olavarria.XLS">Olavarría</option>
+                <option value="stock_cba.XLS">Córdoba</option>
+            </select>
         </div>
-
 
         <div class="controls"
             style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
-            <div class="controls_buscador">
+            <div>
                 <input class="buscador" type="text" id="searchInput" placeholder="Buscar una cubierta..." />
-                <img class="lupita" src="./media/lupita.svg" alt="">
             </div>
-            <div style="margin-bottom:1rem; text-align:center;">
-                <label for="fileSelect">Stock de: </label>
-                <select id="fileSelect">
-                    <option value="stock_olavarria.XLS">Olavarría</option>
-                    <option value="stock_cba.XLS">Córdoba</option>
-                </select>
-            </div>
-
             <div>
                 <label for="filterSelect">Filtrar:</label>
                 <select id="filterSelect">
-                    <option value="todos">Todas las cubiertas</option>
+                    <option value="todos">Todos</option>
                     <option value="cubierta_china">Auto/camioneta chino</option>
                     <option value="camion_chino">Camión chino</option>
                 </select>
             </div>
         </div>
-        <br>
+
         <table>
             <thead>
                 <tr>
